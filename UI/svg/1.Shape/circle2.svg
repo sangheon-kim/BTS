@@ -1,0 +1,10 @@
+<svg class="shapes" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .shapes {
+      width: 150px;
+      height: 150px;
+      background-color: #eee;
+    }
+  </style>
+  <circle cx="30" cy="30" r="10" fill="dodgerblue" stroke="yellow" stroke-width="3" />
+</svg>

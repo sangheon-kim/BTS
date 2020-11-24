@@ -6,12 +6,8 @@
 
 - 사각형을 그릴때 사용한다.<br />
 
-  <style>.shapes { background-color: #eee; width: 150px; height: 150px;}</style>
-    <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="0" width="75" height="75" rx="0" ry="0" fill="skyblue"></rect>
-    </svg> <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
-    <rect x="37.5" y="37.5" width="75" height="75" rx="37.5" ry="20" fill="skyblue"></rect>
-    </svg>
+  ![svg](./rect1.svg)
+  ![svg](./rect2.svg)
 
 ```html
 <!-- 
@@ -34,12 +30,8 @@
 ## circle (Circle)
 
 - x,y 가 정확하게 일치하는 동그라미 그릴 때 사용<br />  
-  <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="75" cy="75" r="30" fill="red" stroke="red"/>
-  </svg>
-  <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="30" cy="30" r="10" fill="dodgerblue" stroke="yellow" stroke-width="3"/>
-  </svg>
+  ![svg](./circle1.svg)
+  ![svg](./circle2.svg)
 
 ```html
 <!-- 
@@ -59,12 +51,8 @@
 ## ellipse
 
 - 타원을 그릴때 사용 <br />
-  <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="75" cy="75" rx="50" ry="20" fill="#00ff00" stroke="red" />
-  </svg>
-  <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="100" cy="0" rx="10" ry="50" fill="purple" stroke="blue" transform="rotate(45)"/>
-  </svg>
+  ![svg](./ellipse1.svg)
+  ![svg](./ellipse2.svg)
 
 ```html
 <!-- 

@@ -1,0 +1,10 @@
+<svg class="shapes" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .shapes {
+      width: 150px;
+      height: 150px;
+      background-color: #eee;
+    }
+  </style>
+  <rect x="0" y="0" width="75" height="75" rx="0" ry="0" fill="skyblue"></rect>
+</svg>

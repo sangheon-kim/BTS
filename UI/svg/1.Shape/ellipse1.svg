@@ -1,0 +1,10 @@
+<svg class="shapes" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .shapes {
+      width: 150px;
+      height: 150px;
+      background-color: #eee;
+    }
+  </style>
+  <ellipse cx="75" cy="75" rx="50" ry="20" fill="#00ff00" stroke="red" />
+</svg>
