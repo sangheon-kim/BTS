@@ -11,4 +11,8 @@
 
 ## 1. 도형 그리기
 
+- <a href="https://github.com/sangheon-kim/BTS/blob/main/UI/svg/1.Shape/README.md">Go to Learn</a>
+
 ## 2. 선 그리기
+
+- <a href="https://github.com/sangheon-kim/BTS/tree/main/UI/svg/2.Line/README.md">Go to Learn</a>
