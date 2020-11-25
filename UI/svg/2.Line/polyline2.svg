@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="line" width="150" height="150">
+  <style>
+    .line {
+      background-color: #eee;
+    }
+  </style>
+  <!-- 계속 이어지는 선 -->
+  <!-- points x y ','마다 각 점을 이어준다. 아래 예시는 점 4개인 것  -->
+  <!-- 첫번째 점은 (10,10) 다음 점은 (100, 10), (80,100), 마지막 점을 (첫번째 점으로 이동시키면 polygon과 동일)좌표 지점에 점을 찍고 이어주는 개념이다. -->
+  <!-- Stroke를 이어주는 것이다. fill 컬러는 채워진다. -->
+  <polyline points="10 10, 100 10, 80 100, 10 10" stroke="blue" stroke-width="3" fill="transparent" />
+</svg>

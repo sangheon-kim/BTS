@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="line" width="300" height="150">
+  <style>
+    .line {
+      background-color: #eee;
+    }
+  </style>
+  <polyline points="10 10, 100 10, 80 100, 90 120, 50 120" stroke="red" stroke-width="3" fill="transparent" />
+  <!-- polyline과 동일하게 모양은 생성되지만, 도형을 마무리를 지어준다는 차이점이 있다.-->
+  <polygon points="160 10, 250 10, 230 100, 240 120, 200 120" stroke="blue" stroke-width="3" fill="transparent" />
+</svg>
