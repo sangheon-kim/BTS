@@ -1,0 +1,24 @@
+<svg class="shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <style>
+    .shapes {
+      width: 300px;
+      height: 200px;
+      background-color: #ddd;
+    }
+
+    path {
+      stroke: tomato;
+      stroke-width: 5;
+      fill: transparent;
+    }
+  </style>
+  <!-- 
+      곡선 그리기 
+      d와 M의 역할은 직선과 동일하다.
+      C의 
+        첫번째 좌표로는 시작 좌표 지점이 되겠다. 
+        두번째 좌표값은 커브의 기준점이 되겠다 마치 자석처럼 구부려서 거가로 지점이 닿게끔 만들어주는 자석같은 느낌?
+        세번째 좌표값은 선의 마지막 좌표지점을 찍어주면된다.
+    -->
+  <path d="M 100 150 C 100 150, 300 50, 500 250"></path>
+</svg>

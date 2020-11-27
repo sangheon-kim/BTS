@@ -1,0 +1,30 @@
+<svg class="shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="300" height="200">
+  <style>
+    .shapes {
+      width: 300px;
+      height: 200px;
+      background-color: #ddd;
+    }
+
+    path {
+      stroke: tomato;
+      stroke-width: 5;
+      fill: transparent;
+    }
+  </style>
+  <!-- path는 보통 일러스트레이터나 펜툴에서 사용한다. -->
+  <!-- 그리기 위해서는 draw의 약자로 추정되는 d에 값을 넣어준다. -->
+  <!-- 
+      draw안에 내부 속성? (inner Attribute)
+      1. M(Move?) - 해당 좌표로 이동을 시키는 것이다. 
+      2. L(Line?) - 선을 그어주기 위한 속성으로 M지점부터 L에 지정한 좌표까지 선을 그어준다.
+      3. H(Horizonal) - 수평으로 이동해준다 값으로는 X좌표 하나만 넣어주면 된다.
+      4. V(Vertical) - 수직으로 이동해준다. 값으로는 Y좌표 하나만 넣어주면 된다.
+      5. Z - 사용시 Polygon 처럼 마무리를 지어준다.
+     -->
+  <!-- (300,200)에서 출발해서 (500,100)으로 선으로 그어주고, 
+      y좌표는 이동된지점부터 x좌표 50까지 그어주고, (50,200)
+      x좌표는 이동된 50에 그대로두고 y좌표 300까지 그어준다. (50, 300)
+    -->
+  <path d="M 300 200 L 500 100 H 50 V 300"></path>
+</svg>

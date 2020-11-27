@@ -1,0 +1,51 @@
+<svg class="heart" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path {
+      stroke: tomato;
+      stroke-width: 5;
+      fill: tomato;
+    }
+
+    @keyframes eye-ani {
+      0% {
+        transform: scale(0.5) translate(-100%, -100%)
+      }
+
+      25% {
+        transform: scale(0.5);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1.2) translateX(0) rotate(360deg) translate(0, 0);
+      }
+    }
+
+    .ani-on {
+      animation: eye-ani 1s infinite alternate;
+      transform-origin: 150px 150px;
+      transition: 1s;
+    }
+  </style>
+  <script>
+    const $heart = document.querySelector(".heart");
+      $heart.addEventListener("click", function() {
+        this.childNodes.forEach((item) => {
+          if (item.nodeName === 'path') {
+            const hasClass = item.getAttributeNS(null, "class") === 'ani-on';
+            if (hasClass) {
+              item.setAttributeNS(null, "class", "");
+            } else {
+              item.setAttributeNS(null, "class", "ani-on");
+            }
+          }
+        })
+      })
+  </script>
+  <path
+    d="M 150 100 C 150 100, 200 40, 235.5 120 C 235 120, 260 150, 150 250 C 150 250, 40 150, 65 120 C 65 120, 100, 40, 150 100 ">
+  </path>
+</svg>
