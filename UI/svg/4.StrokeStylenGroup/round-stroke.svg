@@ -1,0 +1,15 @@
+<svg class="stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="300" height="200"
+  style="background-color: #ddd">
+  <style>
+    path {
+      stroke: tomato;
+      stroke-width: 20;
+      /* 선의 접점을 제외한 끝지점을 둥글게  */
+      stroke-linecap: round;
+      /* 만나는지점을 둥글게 */
+      stroke-linejoin: round;
+      fill: transparent;
+    }
+  </style>
+  <path d="M 50 200 L 300 100 L 400 200"></path>
+</svg>

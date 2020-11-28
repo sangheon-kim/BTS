@@ -1,0 +1,15 @@
+<svg class="stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="300" height="200"
+  style="background-color: #ddd">
+  <style>
+    path {
+      stroke: tomato;
+      stroke-width: 20;
+      /* 기본 값  */
+      stroke-linecap: butt;
+      /* 기본 값 */
+      stroke-linejoin: miter;
+      fill: transparent;
+    }
+  </style>
+  <path d="M 50 200 L 300 100 L 400 200"></path>
+</svg>
