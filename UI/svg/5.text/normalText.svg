@@ -1,0 +1,21 @@
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  <style>
+    .svg {
+      background: #ddd;
+    }
+
+    text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      fill: tomato;
+    }
+
+    path {
+      fill: transparent;
+    }
+  </style>
+  <!-- 글을 써주기 위한 text -->
+  <text x="20" y="50">
+    Sangheon ZZang Zzang
+  </text>
+</svg>
