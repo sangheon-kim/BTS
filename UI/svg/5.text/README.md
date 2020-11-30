@@ -77,3 +77,47 @@
   </text>
 </svg>
 ```
+
+### 특정 테스트에만 스타일 주기
+
+- tspan을 활용하자 <br />
+  ![](textStyle.svg)
+
+```html
+<svg class="shapes" xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  <style>
+    .shapes {
+      background-color: #ddd;
+    }
+
+    text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      fill: tomato;
+    }
+
+    path {
+      stroke: tomato;
+      stroke-width: 5;
+      fill: transparent;
+    }
+
+    .special {
+      fill: dodgerblue;
+    }
+  </style>
+  <defs>
+    <path id="text-curve" d="M 25 75 C 25 75, 100 25, 150 125 C 150 125 200 250 250 125"></path>
+  </defs>
+  <text>
+    <textPath href="#text-curve">
+      Sangheon
+      <tspan class="special">Zzang</tspan>
+      Sangheon
+      <tspan class="special">Zzang</tspan>
+      Sangheon
+      <tspan class="special">Zzang</tspan>
+    </textPath>
+  </text>
+</svg>
+```
