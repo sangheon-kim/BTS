@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #607d8b;
+}
+/* 얼굴 svg에 스타일 추가 주기 */
+.face {
+  position: absolute;
+  left: 50%;
+  /* 트랜스폼을 줘서 정가운데로 맞춘다. */
+  transform: translate(-50%, -50%);
+}
+
+/* 전체 감싸는 문법 */
+.container {
+  position: relative;
+  top: 50px;
+}
+
+/* 컵스타일 */
+.cup {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  /* 오른쪽 방향 그라데이션 효과 */
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  z-index: 1;
+}
+
+/* 꼭대기 테두리를 동그맇게말아준다. */
+.top {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  /* 오른쪽 방향 그라데이션 효과 */
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+}
+
+/* 커피를 감쌀 원형 스타일 안쪽이 움푹 파여보이는 효과를 주기위함 */
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+  /* 역그라데이션 줘서 그림자 효과 */
+  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 커피 스타일 */
+.tea {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#c57e65, #e28462);
+  border-radius: 50%;
+}
+
+/* 손잡이 공통스타일 */
+.handle {
+  position: absolute;
+  top: 40px;
+  width: 160px;
+  height: 160px;
+  /* border-left색상을 배경색과 동일하게 둬서 마치 없는 것처럼만든다.  */
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  /* 둥근 손잡이를 위해 50%를 준다. */
+  border-radius: 50%;
+  /* 손잡이를 만들기 위해서 42도 기울여주고 */
+  transform: rotate(42deg);
+}
+
+/* 좌측 손잡이 */
+.handle.left {
+  left: -70px;
+  /* 180도를 더해주면 좌우반전이 된다. */
+  transform: rotate(226deg);
+  border: 25px solid #f9f9f9;
+  /* border-left색상을 배경색과 동일하게 둬서 마치 없는 것처럼만든다.  */
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+/* 우측 손잡이 */
+.handle.right {
+  right: -70px;
+  border: 25px solid #d9d9d9;
+  /* border-left색상을 배경색과 동일하게 둬서 마치 없는 것처럼만든다.  */
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+/* 접시 컬러 */
+.plate {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 200px;
+  /* 오른쪽 방향 그라데이션 효과 */
+  background: linear-gradient(to right, #f9f9f9, #e7e7e7);
+  border-radius: 50%;
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* before를 활용한 접시 테두리 색상 */
+.plate::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  /* 왼쪽 방향 그라데이션 효과 */
+  background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+}
+
+/* after를 활용한 컵 그림자 효과 */
+.plate::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  /* 원형 그라데이션 */
+  background: radial-gradient(rgba(0, 0, 0, 0.3) 25%, transparent, transparent);
+}
+
+/* 연기 묶음 */
+.vapour {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* 연기 관련 스타일 */
+.vapour span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  /* 위 0 좌우 2 아래 50 */
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  /* 스타일에 준 값을 이용해서 변수로 활용한다음 뒤에 숫자 *초 */
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+/* 연기 애니메이션 */
+@keyframes animate {
+  /* 처음에는 기존 bottom 포지션을 -로잡아서 안보이게 세팅해놓으면서 포지션은 컵안에 매치시켜놓는다.*/
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  /* 처음에는 translateY를 주어 포지션을 끌어올려주면서 스케일X를 키워주면서 퍼지는 효과를 준다.*/
+  100% {
+    transform: translateY(-300px) scaleX(19);
+  }
+}
