@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <img src="./sample1/1.png" data-speed="-5" class="layer" />
+    <img src="./sample1/2.png" data-speed="5" class="layer" />
+    <img src="./sample1/3.png" data-speed="2" class="layer" />
+    <img src="./sample1/4.png" data-speed="6" class="layer" />
+    <img src="./sample1/5.png" data-speed="8" class="layer" />
+    <img src="./sample1/6.png" data-speed="-2" class="layer" />
+    <img src="./sample1/7.png" data-speed="4" class="layer" />
+    <img src="./sample1/8.png" data-speed="-9" class="layer" />
+    <img src="./sample1/9.png" data-speed="6" class="layer" />
+    <img src="./sample1/10.png" data-speed="-7" class="layer" />
+    <img src="./sample1/11.png" data-speed="-5" class="layer" />
+    <img src="./sample1/12.png" data-speed="5" class="layer" />
+    <h2 class="font" data-speed="2">Merry</h2>
+  </section>
+  <script>
+    document.addEventListener("mousemove", parallax);
+    function parallax(e) {
+      this.querySelectorAll(".layer").forEach(layer => {
+        let speed = layer.getAttribute("data-speed");
+        
+        let x = (window.innerWidth - e.pageX * speed)  / 100;
+        let y = (window.innerHeight - e.pageY * speed) / 100;
+        
+        
+        // layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        layer.style.transform = `translate3d(${x}px, ${y}px, 0)`
+      });
+      this.querySelectorAll(".font").forEach(font => {
+        let speed = font.getAttribute("data-speed");
+        let y = (window.innerHeight - e.pageY * speed) / 100;
+        font.style.transform = `translate3d(-50%, ${y}px, 0)`
+        // font.style.transform = `translateX(-50%) translateY(${y}px)`
+      })
+    }
+  </script>
+</body>
+</html>

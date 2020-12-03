@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animated Tea Cup | CSS Animation</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .coffee {
+      position: absolute;
+      left: 75%;
+      top: -12px;
+      transform: skew(88deg, 69deg) translateX(50%) scale(0.5);
+      width: 25px;
+      height: 25px;
+      /* top: 50%; */
+      /* transform: translate(-50%, -50%); */
+      /* top:0px;/ */
+      /* width: 50px; */
+      /* height: 50px; */
+      z-index: 10;
+      
+    }
+    .coffee .hair {
+      fill: black !important;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -33,7 +53,9 @@
           <span style="--i:7;"></span>
         </div>
         <div class="circle">
-          <div class="tea"></div>
+          <div class="tea">
+            <object class="coffee" data="face_brown.svg" type="image/svg+xml"></object>
+          </div>
         </div>
         <img src="face_s.svg" alt="" width="150" height="150" class="face">
       </div>
