@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* 폰트 스타일 팝핀 */
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* 백그라운드 스타일 적용 (radialGradient) 원형 그라데이션 */
+  overflow: hidden;
+  background: rgb(255, 100, 100);
+  background: radial-gradient(circle, rgba(255, 100, 100, 0) 0%, rgba(200, 9, 9, 0.5) 10%, rgba(250, 93, 93, 1) 100%);
+}
+
+section {
+  position: relative;
+  min-width: 1500px;
+  /* 화면이 넘치는 일이 없게 height는 고정으로 둔다 */
+  height: 100vh;
+  /* 화면 넘치면 스크롤 생기는것 방지 */
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: auto !important;
+  object-fit: cover;
+  z-index: 0;
+}
+
+section img.image16 {
+  width: 550px;
+  left: initial;
+}
+
+#gift1 {
+  top: -90px;
+  left: initial;
+  right: -50px;
+}
+
+#gift2 {
+  top: initial;
+  bottom: -170px;
+  right: -120px;
+}
+
+#gift3 {
+  top: -150px;
+  left: 190px;
+}
+
+#gift4 {
+  top: initial;
+  bottom: -80px;
+  left: -50px;
+}
+
+/* 뿔 */
+#horn {
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+}
+
+#cherry {
+  top: 400px;
+  left: 150px;
+}
+
+#gold-leaf {
+  left: initial;
+  top: initial;
+  right: 350px;
+  bottom: 0;
+}
+
+.cane {
+  width: 250px;
+}
+#cane1 {
+  top: initial;
+  left: initial;
+  bottom: 0px;
+  right: 200px;
+}
+
+#cane2 {
+  top: -20px;
+  left: -50px;
+}
+
+#bell {
+  width: 250px;
+  top: 220px;
+  left: 120px;
+}
+
+.tree {
+  width: 300px;
+}
+
+.tree#tree-left {
+  top: 20%;
+  left: -100px;
+}
+
+.tree#tree-right {
+  left: initial;
+  top: 100px;
+  right: 150px;
+}
+
+.ball {
+  width: 250px;
+}
+
+#ball-left1 {
+  top: 40px;
+  left: 150px;
+}
+
+#ball-left2 {
+  top: initial;
+  bottom: -150px;
+  left: 300px;
+  width: 350px;
+}
+
+#ball-right {
+  top: initial;
+  left: initial;
+  bottom: 150px;
+  right: -10px;
+}
+
+.band#band-left {
+  width: 200px;
+  top: initial;
+  left: 450px;
+  bottom: -100px;
+  transform: rotate(-15deg);
+}
+
+.band#band-right {
+  top: 250px;
+  left: initial;
+  right: 100px;
+  width: 200px;
+  transform: rotate(30deg);
+}
+
+.image19,
+.image20 {
+  top: initial;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+}
+
+.image19 {
+  bottom: 180px;
+}
+
+.image20 {
+  bottom: 100px;
+}
+
+section h2 {
+  position: absolute;
+  color: #fff;
+  font-size: 10em;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-shadow: 2px 4px;
+}
+
+section img#christmas {
+  width: 1000px;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}

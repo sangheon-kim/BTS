@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallex</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <section>
+    <img src="./sample2/1.png" data-speed="2" class="font image1" id="christmas" alt="크리스마스 문구" />
+    <img src="./sample2/2.png" data-speed="2" class="font image2" id="horn" alt="뿔" />
+    <img src="./sample2/3.png" data-speed="2" class="layer image3" id="cherry" />
+    <img src="./sample2/4.png" data-speed="6" class="layer image4" id="gold-leaf"/>
+    <img src="./sample2/5.png" data-speed="1" class="layer cane" id="cane1" />
+    <img src="./sample2/11.png" data-speed="1" class="layer cane" id="cane2" />
+    <img src="./sample2/6.png" data-speed="1" class="layer image6" id="bell" />
+    <img src="./sample2/7.png" data-speed="1" class="layer tree" id="tree-left" />
+    <img src="./sample2/12.png" data-speed="5" class="layer tree" id="tree-right" />
+    <img src="./sample2/9.png" data-speed="6" class="layer ball" id="ball-left1"/>
+    <img src="./sample2/9.png" data-speed="6" class="layer ball" id="ball-left2"/>
+    <img src="./sample2/13.png" data-speed="5" class="layer ball" id="ball-right"/>
+   <img src="./sample2/10.png" data-speed="-7" class="band" id="band-left" />
+    <img src="./sample2/10.png" data-speed="0" class="band" id="band-right" />
+    <img src="./sample2/16.png" data-speed="2" class="layer image16" id="gift1" />
+    <img src="./sample2/16.png" data-speed="2" class="layer image16" id="gift2" />
+    <img src="./sample2/17.png" data-speed="2" class="layer image16" id="gift3" />
+    <img src="./sample2/17.png" data-speed="2" class="layer image16" id="gift4" />
+    <img src="./sample2/19.png" data-speed="2" class="font image19"  />
+    <img src="./sample2/20.png" data-speed="2" class="font image20" />
+    <h2 class="font" data-speed="2">Merry</h2>
+  </section>
+  <script>
+    document.addEventListener("mousemove", parallax);
+    function parallax(e) {
+      this.querySelectorAll(".layer").forEach(layer => {
+        let speed = layer.getAttribute("data-speed");
+        
+        let x = (window.innerWidth - e.pageX * speed)  / 100;
+        let y = (window.innerHeight - e.pageY * speed) / 100;
+        
+        
+        // layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        layer.style.transform = `translate3d(${x}px, ${y}px, 0)`
+      });
+      this.querySelectorAll(".font").forEach(font => {
+        let speed = font.getAttribute("data-speed");
+        let y = (window.innerHeight - e.pageY * speed) / 100;
+        font.style.transform = `translate3d(-50%, ${y}px, 0)`
+        // font.style.transform = `translateX(-50%) translateY(${y}px)`
+      })
+    }
+  </script>
+</body>
+</html>

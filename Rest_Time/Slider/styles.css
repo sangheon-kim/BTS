@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #570d11;
+}
+
+section::before {
+  content: "Responsive";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50vh;
+  font-size: 15vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  color: transparent;
+}
+
+section .slider {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 10;
+}
+
+section .slider::before {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  border-bottom: 120px solid #c61822;
+  background: #e51e2a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .slider img {
+  max-width: 150px;
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+}
+
+section .slider .swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section .slider .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .slider .swiper-container-3d .swiper-slide-shadow-left,
+section .slider .swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+/*# sourceMappingURL=styles.css.map */
