@@ -1,0 +1,47 @@
+/* 연기 묶음 */
+.vapour {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 연기 관련 스타일 */
+.vapour span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  /* 위 0 좌우 2 아래 50 */
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+}
+
+/* 연기 애니메이션 */
+@keyframes animate {
+  /* 처음에는 기존 bottom 포지션을 -로잡아서 안보이게 세팅해놓으면서 포지션은 컵안에 매치시켜놓는다.*/
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  /* 처음에는 translateY를 주어 포지션을 끌어올려주면서 스케일X를 키워주면서 퍼지는 효과를 준다.*/
+  100% {
+    transform: translateY(-300px) scaleX(19);
+  }
+}

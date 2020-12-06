@@ -198,8 +198,6 @@ body {
   animation: animate 5s linear infinite;
   opacity: 0;
   filter: blur(8px);
-  /* 스타일에 준 값을 이용해서 변수로 활용한다음 뒤에 숫자 *초 */
-  animation-delay: calc(var(--i) * -0.5s);
 }
 
 /* 연기 애니메이션 */

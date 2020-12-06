@@ -17,7 +17,6 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,23 +26,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #570d11;
-}
-
-section::before {
-  content: "Responsive";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 50vh;
-  font-size: 15vw;
-  font-weight: 700;
-  text-transform: uppercase;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
-  color: transparent;
 }
 
 section .slider {
@@ -65,8 +47,6 @@ section .slider::before {
   left: 0;
   width: 100%;
   height: 220px;
-  border-bottom: 120px solid #c61822;
-  background: #e51e2a;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -76,6 +56,94 @@ section .slider img {
   position: absolute;
   bottom: 0;
   max-height: 100%;
+}
+
+section .slider .board {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  margin: 0 16px;
+}
+
+section .slider .board-1 {
+  background-color: #ff1a1a;
+}
+
+section .slider .board-2 {
+  background-color: #ff3333;
+}
+
+section .slider .board-3 {
+  background-color: #ff4d4d;
+}
+
+section .slider .board-4 {
+  background-color: #ff6666;
+}
+
+section .slider .board-5 {
+  background-color: #ff8080;
+}
+
+section .slider .board-6 {
+  background-color: #ff9999;
+}
+
+section .slider .board-7 {
+  background-color: #ffb3b3;
+}
+
+section .slider .board-8 {
+  background-color: #ffcccc;
+}
+
+section .slider .board-9 {
+  background-color: #ffe6e6;
+}
+
+section .slider .board-10 {
+  background-color: white;
+}
+
+section .slider .board-11 {
+  background-color: white;
+}
+
+section .slider .board-12 {
+  background-color: white;
+}
+
+section .slider .board-13 {
+  background-color: white;
+}
+
+section .slider .board-14 {
+  background-color: white;
+}
+
+section .slider .board-15 {
+  background-color: white;
+}
+
+section .slider .board-16 {
+  background-color: white;
+}
+
+section .slider .board-17 {
+  background-color: white;
+}
+
+section .slider .board-18 {
+  background-color: white;
+}
+
+section .slider .board-19 {
+  background-color: white;
+}
+
+section .slider .board-20 {
+  background-color: white;
 }
 
 section .slider .swiper-container {
@@ -95,6 +163,7 @@ section .slider .swiper-slide {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 16px;
 }
 
 section .slider .swiper-container-3d .swiper-slide-shadow-left,

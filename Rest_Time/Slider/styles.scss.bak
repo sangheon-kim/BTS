@@ -17,27 +17,27 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  // overflow: hidden;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  // background: #570d11;
+  background: #570d11;
 
-  // &::before {
-  //   content: "Responsive";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   text-align: center;
-  //   line-height: 50vh;
-  //   font-size: 15vw;
-  //   font-weight: 700;
-  //   text-transform: uppercase;
-  //   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
-  //   color: transparent;
-  // }
+  &::before {
+    content: "Responsive";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50vh;
+    font-size: 15vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+  }
 
   .slider {
     position: relative;
@@ -53,8 +53,8 @@ section {
       left: 0;
       width: 100%;
       height: 220px;
-      // border-bottom: 120px solid #c61822;
-      // background: #e51e2a;
+      border-bottom: 120px solid #c61822;
+      background: #e51e2a;
       box-sizing: border-box;
     }
 
@@ -72,16 +72,15 @@ section {
       bottom: 0;
       margin: 0 16px;
     }
-
-    @function calcPercent($number) {
-      $percent: "%";
-
-      @return $number * 5;
-    }
-
-    @for $i from 1 through 20 {
-      .board-#{$i} {
-        background-color: lighten($color: red, $amount: calcPercent($i));
+    @for $i from 1 through 8 {
+      @if $i % 2 == 0 {
+        .board-#{$i} {
+          background-color: red;
+        }
+      } @else {
+        .board-#{$i} {
+          background-color: yellow;
+        }
       }
     }
 
