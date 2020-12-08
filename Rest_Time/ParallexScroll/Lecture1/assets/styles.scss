@@ -40,8 +40,10 @@
       bottom: 0;
       max-width: 100%;
       animation: animate calc(3s * var(--i)) linear infinite;
+    }
 
-      &.pause {
+    &.pause {
+      img {
         animation: none;
         opacity: 0;
       }

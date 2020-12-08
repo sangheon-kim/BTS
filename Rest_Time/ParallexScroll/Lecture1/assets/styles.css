@@ -51,7 +51,7 @@
           animation: animate calc(3s * var(--i)) linear infinite;
 }
 
-.banner .clouds img.pause {
+.banner .clouds.pause img {
   -webkit-animation: none;
           animation: none;
   opacity: 0;
