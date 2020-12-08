@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <title>Mountain</title>
+</head>
+<body>
+  <!-- section.zoom>img#layer$[src="./images/mountain$.png" alt="산$"]*2+img#layer3[src="./images/text.png" alt="글자"]+section>h2{Simple Background parallax Using Javascript}+p{lorem} -->
+  <section class="zoom">
+    <img src="./images/mountain1.png" alt="산1" id="layer1">
+    <img src="./images/mountain2.png" alt="산2" id="layer2">
+    <img src="./images/text.png" alt="글자" id="text">
+  </section>
+  <section class="content">
+    <h2>Simple Background parallax Using Javascript</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci impedit, esse ullam corrupti porro ex libero tempora tenetur fuga dolorem similique eum ut repudiandae sapiente voluptas neque quibusdam exercitationem?
+    Expedita quos nulla eos consectetur voluptas saepe blanditiis porro mollitia odio iusto, harum enim cum, ullam explicabo voluptate nemo in, obcaecati dolor voluptatibus nam officiis sed. Libero labore reiciendis rerum.
+    Vel corporis, possimus, dolores accusamus sint aliquam ipsam recusandae rem vitae harum asperiores facilis doloremque earum quidem quis! Architecto sequi illum nam recusandae modi expedita neque obcaecati. Nulla, pariatur ipsa.
+    Magnam praesentium deleniti odit repellat, fugit est nulla animi nemo dolorum. Repellendus voluptatem amet, facilis modi eum, optio dignissimos numquam consequuntur id sit cumque autem sed eveniet accusantium quisquam esse?
+    Inventore tempore delectus blanditiis quibusdam! Voluptatibus corrupti quae quaerat atque quisquam tempora, voluptas sapiente ducimus quibusdam, modi reiciendis iure aperiam adipisci, odio eius? Alias laboriosam quis placeat cumque eum eaque.
+    Velit itaque quas a voluptatum nemo, quae repudiandae quia aliquid ipsum temporibus, cum optio porro nam aliquam ullam blanditiis quidem esse vel beatae est et sed saepe illum officia. Aut.
+    Tempora molestias suscipit sequi nulla, soluta magni culpa sunt impedit sed similique laudantium saepe ab veniam architecto quae, voluptatem adipisci quos repellendus quas, voluptatum dolorem! Deleniti veritatis repellendus tenetur quod.
+    Optio ad ab consequuntur accusantium beatae dicta molestias eius asperiores quod repellat itaque consectetur cupiditate fugiat omnis maiores laborum cum fuga, exercitationem, necessitatibus doloremque. Aspernatur porro at ad itaque commodi.
+    Explicabo dolore sint necessitatibus provident tempore eius tenetur aut enim voluptatum culpa ab, consequatur eaque totam, accusamus accusantium quia id numquam quae? Reiciendis suscipit dolorum consequuntur id et, minima minus.
+    Ut corrupti, assumenda fugiat molestiae veniam impedit. Illo, eaque totam in cupiditate sunt aspernatur maiores excepturi. Nostrum sint dicta, fuga porro molestiae sunt necessitatibus quos officiis autem accusantium aperiam eius!
+    Ipsum aperiam laudantium officiis ratione exercitationem unde, quae ipsam? Voluptatibus nostrum nihil asperiores culpa ipsa ullam et quod. Assumenda molestiae laboriosam commodi officiis dolorum. Cupiditate nostrum laudantium numquam neque incidunt!
+    Cupiditate autem possimus voluptas sequi accusamus aperiam cum ad odit qui, reprehenderit sapiente laboriosam sunt eligendi pariatur perferendis earum aliquid debitis. Omnis ipsam amet debitis tempora placeat libero necessitatibus inventore.
+    Ratione ad illo porro quaerat, quo perferendis aperiam dignissimos quod. Praesentium illum sunt quis velit. Quia numquam laborum temporibus veritatis, aut aperiam aspernatur tempora debitis dicta recusandae, ullam aliquid nam?
+    Obcaecati temporibus eum provident fuga officia optio exercitationem non, fugiat corporis minus id officiis quam ducimus odit consectetur, molestiae dicta. Consequatur, voluptatibus! Placeat molestias nihil maiores delectus nam sint quos?
+    Delectus consequuntur eum cupiditate quasi voluptatibus inventore fuga nisi beatae excepturi, impedit sed facere vitae itaque cum nemo repellendus illo, placeat perferendis alias officiis distinctio fugit quis tempora a? Voluptates.
+    Quae, officiis dignissimos velit aut suscipit ab, impedit beatae qui, hic illo aliquid! Asperiores amet officia voluptate beatae? Hic eius eos rerum fugit alias facilis optio quasi, quaerat magni reiciendis.
+    Quia sit distinctio tempora modi adipisci enim laborum labore laudantium assumenda aliquid dicta, nobis provident quam pariatur doloremque laboriosam, animi numquam ullam incidunt inventore possimus, sint aut corrupti? Maiores, dignissimos.
+    Eveniet eligendi illum dolores fugiat neque quo et earum aut sit ab deleniti dolorum harum ipsam, itaque, eius est dolorem temporibus corrupti, obcaecati incidunt vel quis aspernatur amet. Maxime, earum.
+    Tempore qui libero voluptatibus accusamus, dolores atque laudantium at consectetur repudiandae asperiores ad ratione culpa adipisci tempora eveniet, alias, nesciunt dignissimos fugit? Iste deserunt cumque minima voluptates amet non fuga.
+    Repudiandae, beatae tempore? Vel voluptas ad animi sequi odio! Voluptate iste odit, quaerat nostrum velit inventore magni a soluta corporis quasi alias laboriosam explicabo. Quos, accusantium? Repellendus neque et velit.</p>
+  </section>
+  <script>
+    // 좌측이미지 레프트 비율
+    var LEFT = 0.4;
+    // 브라우저 사이즈
+    let windowWidth = window.innerWidth;
+    var layer1 = document.getElementById("layer1"), 
+        layer2 = document.getElementById("layer2"), 
+        text = document.getElementById("text"), 
+        scroll = window.pageYOffset,
+        // left값은 결국 브라우저 사이즈 * left 비율
+        // 좌측 이미지 left 값 지정을 위한 값
+        left = windowWidth * LEFT; 
+    
+    // let windowWidth = window.innerWidth;
+    // 첫번째 이미지에 left 속성 부여
+    layer1.style.left = left + 'px';
+
+    function styleEdit() {
+      scroll = window.pageYOffset;
+
+      // 좌측 이미지 너비는 스크롤 사이즈를 기준으로 100%부터 출발해서 scroll 값의 5분의 1값 더하기
+      layer1.style.width = (100 + scroll / 5) + "%";
+      // 좌측 이미지 사진은 현재 브라우저 사이즈의 LEFT 비율에서 scroll 비례하여 감소
+      layer1.style.left = left - (scroll * 2.5) + 'px';
+      // 우측 이미지 너비는 스크롤 사이즈를 기준으로 100%부터 출발해서 scroll 값의 5분의 1값 더하기
+      layer2.style.width = (100 + scroll / 5) + "%";
+      // 우측 이미지에 left값을 밀어주는데, scroll 사이즈에 1.5배수 비례하여 px값 적용해서 밀어준다.
+      layer2.style.left = (scroll * 1.5) + 'px';
+      // 텍스트는 바텀을 기준으로 맞춰놓았고, 텍스트가 올라가야 하기에 scroll위치의 8을 나눈 값에 %를 부여 했다.
+      text.style.bottom = (scroll / 8) + "%";
+    }
+
+    window.addEventListener("resize", function() {
+      // 리사이즈 이벤트 발생시에 브라우저 사이즈와 left값 수정
+      windowWidth = window.innerWidth
+      left = windowWidth  * LEFT;
+
+      // 리사이즈 발생시에 스크롤 사이즈가 변경됨에 따라서 
+      // 이미지들의 스타일도 수정 해줘야 한다.
+      // 리사이즈 이벤트 발생시 스타일 edit 함수 호출
+      styleEdit(scroll, left)
+    })
+
+    document.addEventListener("scroll", function () {
+      // 스크롤 이벤트 발생시 스타일 edit 함수 호출
+      styleEdit(scroll, left)
+    });
+  </script>
+</body>
+</html>

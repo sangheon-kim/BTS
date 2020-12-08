@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 150vh;
+}
+
+.zoom {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../images/1.png);
+  background-size: 115% 115%;
+  background-position: -100px -100px;
+  background-repeat: no-repeat;
+}
+
+.zoom #up-curtain {
+  position: absolute;
+  top: -50px;
+  z-index: 11;
+  background-size: cover;
+  width: 100%;
+}
+
+.zoom #layer1 {
+  position: absolute;
+  height: 110%;
+  -webkit-transform: translateX(-50%) scaleX(1.7);
+          transform: translateX(-50%) scaleX(1.7);
+  z-index: 10;
+}
+
+.zoom #layer2 {
+  position: absolute;
+  height: 110%;
+  -webkit-transform: scaleX(1.7);
+          transform: scaleX(1.7);
+  z-index: 9;
+}
+
+.zoom #text {
+  position: absolute;
+  width: 85vw;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%) translateY(50%);
+          transform: translateX(-50%) translateY(50%);
+}
+
+.content {
+  padding: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content h2 {
+  font-size: 2em;
+}
+
+.content p {
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=style.css.map */

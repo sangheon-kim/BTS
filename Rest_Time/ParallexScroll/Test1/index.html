@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Curtain</title>
+</head>
+<body>
+  <!-- section.zoom>img#layer$[src="./images/mountain$.png" alt="산$"]*2+img#layer3[src="./images/text.png" alt="글자"]+section>h2{Simple Background parallax Using Javascript}+p{lorem} -->
+  <section class="zoom">
+    <img src="./images/4.png" alt="커튼위" id="up-curtain">
+    <img src="./images/2.png" alt="왼쪽 커튼" id="layer1">
+    <img src="./images/3.png" alt="오른쪽 커튼" id="layer2">
+    <!-- <img src="./images/text.png" alt="글자" id="text"> -->
+  </section>
+  <script>
+    // 좌측이미지 레프트 비율
+    var LEFT = 0.6;
+    var RIGHT = -0.095;
+    // 브라우저 사이즈
+    let windowWidth = window.innerWidth;
+    var layer1 = document.getElementById("layer1"), 
+        layer2 = document.getElementById("layer2"), 
+        text = document.getElementById("text"), 
+        scroll = window.pageYOffset,
+        // left값은 결국 브라우저 사이즈 * left 비율
+        // 좌측 이미지 left 값 지정을 위한 값
+        left = windowWidth * LEFT;
+        right = windowWidth * RIGHT;
+        console.log(right)
+    
+    // let windowWidth = window.innerWidth;
+    // 첫번째 이미지에 left 속성 부여
+    layer1.style.left = left + 'px';
+    layer2.style.left = right + 'px';
+    // layer2.style.left = right + 'px';
+
+    function styleEdit() {
+      scroll = window.pageYOffset;
+
+      // 좌측 이미지 너비는 스크롤 사이즈를 기준으로 100%부터 출발해서 scroll 값의 5분의 1값 더하기
+      // layer1.style.width = (100 + scroll / 5) + "%";
+      // 좌측 이미지 사진은 현재 브라우저 사이즈의 LEFT 비율에서 scroll 비례하여 감소
+      layer1.style.left = left - (scroll * 2.5) + 'px';
+      // 우측 이미지에 left값을 밀어주는데, scroll 사이즈에 1.5배수 비례하여 px값 적용해서 밀어준다.
+      layer2.style.left = right + (scroll * 2.5) + 'px';
+      
+    }
+
+    window.addEventListener("resize", function() {
+      // 리사이즈 이벤트 발생시에 브라우저 사이즈와 left값 수정
+      windowWidth = window.innerWidth
+      left = windowWidth  * LEFT;
+      right = windowWidth * RIGHT;
+
+      // 리사이즈 발생시에 스크롤 사이즈가 변경됨에 따라서 
+      // 이미지들의 스타일도 수정 해줘야 한다.
+      // 리사이즈 이벤트 발생시 스타일 edit 함수 호출
+      styleEdit()
+    })
+
+    document.addEventListener("scroll", function () {
+      console.log('scroll')
+      // 스크롤 이벤트 발생시 스타일 edit 함수 호출
+      styleEdit()
+    });
+  </script>
+</body>
+</html>
