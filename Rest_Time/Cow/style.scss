@@ -1,0 +1,32 @@
+/* Reset */
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+// HTML 요소를 지칭
+:root {
+  --primary-color: saddlebrown;
+  --secondary-color: burlywood;
+}
+
+/* Layouts */
+.center {
+  // 컨텐츠 사이만큼 줄어든다.
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aqua;
+}
+
+/* Design */
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}

@@ -1,0 +1,41 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin-left: auto;
+  background-color: red;
+  height: 60px;
+
+  .header-wrapper {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    background-color: skyblue;
+  }
+
+  .box {
+    display: inline-block;
+    min-width: 200px;
+    margin: 0 20px;
+    height: 50px;
+    background-color: yellow;
+
+    @media only screen and (max-width: 600px) {
+      min-width: 100px;
+    }
+
+    &#box2 {
+      // margin-left: auto;
+    }
+  }
+}

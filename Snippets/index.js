@@ -9,6 +9,3 @@ function isGenerator(func) {
     Object.getPrototypeOf(func).constructor === Object.getPrototypeOf(function* () {}).constructor
   );
 }
-
-console.log(isGenerator(f));
-console.log(isGenerator(g));

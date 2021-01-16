@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="page1">
+      <p>Parallax</p>
+    </div>
+    <!-- <div class="page2">
+      <p>Parallax</p>
+    </div> -->
+    <ul class="parallax-list">
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item1" alt="item1">
+        <p>품목1</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item2" alt="item2">
+        <p>품목2</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item3" alt="item3">
+        <p>품목3</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item4" alt="item4">
+        <p>품목4</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item5" alt="item5">
+        <p>품목5</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item6" alt="item6">
+        <p>품목6</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item7" alt="item7">
+        <p>품목7</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item8" alt="item8">
+        <p>품목8</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item5" alt="item5">
+        <p>품목9</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item6" alt="item6">
+        <p>품목10</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item7" alt="item7">
+        <p>품목11</p>
+      </li>
+      <li class="parallax-list-item">
+        <img src="https://via.placeholder.com/250?text=item8" alt="item8">
+        <p>품목12</p>
+      </li>
+    </ul>
+    <div class="page2"></div>
+  </div>
+  <script>
+    const parallaxList = document.querySelector(".parallax-list")
+    const items = document.getElementsByClassName("parallax-list-item");
+    console.dir(parallaxList.previousElementSibling.clientHeight);
+    console.dir(parallaxList.offsetTop)
+    document.addEventListener("scroll", function(e) {
+      console.dir(window)
+      
+      console.dir(window.pageYOffset)
+      // console.log(window)
+    });
+
+    [...items].forEach((elem) => {
+      console.dir(elem)
+    })
+  </script>
+</body>
+</html>

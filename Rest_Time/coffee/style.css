@@ -198,6 +198,7 @@ body {
   animation: animate 5s linear infinite;
   opacity: 0;
   filter: blur(8px);
+  animation-delay: calc(var(--i) * -0.5s);
 }
 
 /* 연기 애니메이션 */
